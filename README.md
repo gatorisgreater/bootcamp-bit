@@ -8,10 +8,13 @@ Everyday you pair program with a different cohort partner. By the time you gradu
 
 Tech Stack:
 
-├── bootcamp-bit: server-side code 
+├ bootcamp-bit
+├── run.py: server-side code and logic 
 │ 
-├── templates 
-│ └── HTML templates
+├── templates: HTML templates 
+│ └── child.html
+│ └── macros.html
+│ └── parent.html
 
 *Flask - implements API endpoints that serve resources to the app.
 
@@ -21,15 +24,18 @@ Bootcamp Bit is designed with bootcamp students in mind.
 
 Abbreviated MVP Implementation:
 
-API - GET Endpoint that serves the projects you've worked on with each cohort member. 
+API - GET endpoints that serve the projects you've worked on with each cohort member. 
 
 Front-End - Response presented within a dynamic HTML page customized for the cohort member you've queried.
 
-Database - None. Data will be stored within endpoints.
+Database - None. Data is stored within endpoints.
 
 Future Improvements:
 
+Dashboard integration to advance "native" experience.
+
 GitHub integration that automatically detects repos and collaborators.
+
 Database Implementation.
 
-PUT endpoints that allows the user to update the database as they move along their bootcamp experience.
+PUT endpoints that allow the user to update the database as they move along their bootcamp experience.

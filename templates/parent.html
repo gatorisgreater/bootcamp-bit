@@ -1,0 +1,64 @@
+{% from "macros.html" import nav_link with context %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bootcamp Bit</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                margin: 0;
+            }
+        
+            div#main {
+                max-width: 500px;
+                margin-left: 25%;
+                padding: 10px 50px;
+            }
+
+            span {
+                font-weight: bold;
+            }
+            
+           ul#nav {
+                width: 25%;
+                height: 100%;
+                position: fixed;
+                overflow: auto;
+            }
+            
+            .nav a, span {
+                display: block;
+                padding: 8px 0px;
+            }
+
+            a.active {
+                font-weight: bold;
+            }
+            
+            h2 {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+
+            <ul id="nav" class="nav navbar-nav">
+            <span class="title">Cohort 7 - The Cohort for (Dog) Lovers</span>
+              {{ nav_link('home', 'Home') }}
+              {{ nav_link('alex', 'Alex') }}
+              {{ nav_link('anitha', 'Anitha') }}
+              {{ nav_link('john', 'John') }}
+              {{ nav_link('roberto', 'Roberto') }}
+              {{ nav_link('spencer', 'Spencer') }}
+              {{ nav_link('zach', 'Zach') }}
+            </ul>
+
+        <div id="main">
+            <h2>Bootcamp Bit </h2>
+            <br>
+            {% block content %}{% endblock %}
+            <br>
+        </div>
+
+    </body>
+</html>

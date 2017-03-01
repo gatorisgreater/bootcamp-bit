@@ -11,17 +11,17 @@ Before kicking off your pair programming for the day query by cohort mate to see
 
 Tech Stack:
 
-├ bootcamp-bit
-├── run.py: server-side code and logic 
-│ 
-├── templates: HTML templates 
-│ └── child.html
-│ └── macros.html
-│ └── parent.html
+    ├ bootcamp-bit
+    ├── run.py: server-side code and logic 
+    │ 
+    ├── templates: HTML templates 
+    │ └── child.html
+    │ └── macros.html
+    │ └── parent.html
 
-*Flask - implements API endpoints that serve resources to the app.
+* Flask - implements API endpoints that serve resources to the app.
 
-*Jinja2 - HTML templates for dynamic client-side rendering of the app.
+* Jinja2 - HTML templates for dynamic client-side rendering of the app.
 
 Bootcamp Bit is designed with bootcamp students in mind.
 

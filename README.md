@@ -41,4 +41,4 @@ GitHub integration that automatically detects repos and collaborators.
 
 Database Implementation.
 
-PUT endpoints that allow the user to update the database as they move along their bootcamp experience.
+Streeeetch - build it out to double as an administrative tool for PMs.

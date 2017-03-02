@@ -15,6 +15,7 @@ Tech Stack:
     ├── run.py: server-side code and logic 
     │ 
     ├── templates: HTML templates 
+    │ └── add_folder.html
     │ └── child.html
     │ └── macros.html
     │ └── parent.html

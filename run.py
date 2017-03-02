@@ -1,5 +1,8 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, url_for
 app = Flask(__name__)
+
+my_list=[0]
+
 
 @app.route("/")
 @app.route("/home")
@@ -7,8 +10,18 @@ def home():
     my_img = "https://avatars1.githubusercontent.com/u/22352414?v=3&s=460"
     return render_template('child.html',
                            my_string="Your most recent projects",
-                           my_list=[0],
+                           my_list=my_list,
                            my_img=my_img)
+
+@app.route("/add", methods=["GET"])
+def add_folder_get():
+    return render_template("add_folder.html")
+    
+@app.route("/add", methods=["POST"])
+def add_folder_post():
+    entry = request.form["title"]
+    my_list.insert(0, entry)
+    return redirect(url_for("home"))
 
 # @app.route("/<name>")
 # def cohortmate(name):

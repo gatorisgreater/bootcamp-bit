@@ -4,28 +4,37 @@
     <head>
         <title>Bootcamp Bit</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
         <style>
             body {
                 margin: 0;
+                font-size: 16px;
+                font-weight: 400;
+                font-family: 'Raleway', sans-serif;
+                font-style: normal;
             }
-        
+            
             div#main {
                 max-width: 500px;
                 margin-left: 25%;
                 padding: 10px 50px;
+                color: #404853;
             }
 
             span {
                 font-weight: bold;
-                width: 50%;                
+                width: 50%;
+                color: #404853 !important;
             }
             
            ul#nav {
-                width: 25%;
+                width: 20%;
                 height: 100%;
                 position: fixed;
                 overflow: auto;
-            }
+                background-color: #6799FF;
+                color: white;
+             }
             
             .nav a, span {
                 display: block;
@@ -34,6 +43,14 @@
 
             a.active {
                 font-weight: bold;
+                background-color: #FCC939;
+                box-shadow: -5px 0 0 #FCC939, 5px 0 0 #FCC939;
+                border-radius: 3px;
+                width: 50%;
+            }
+            
+            a, a:visited, a:hover, a:active {
+                color: inherit;
             }
             
             h2 {
@@ -45,12 +62,30 @@
                 margin: 0 auto;
                 display: block;
             }
+            
+            input {
+                font-size: 16px;
+                font-weight: 400;
+                font-family: 'Raleway', sans-serif;
+                font-style: normal;
+            }
+                
+            button {
+                background-color: #FCC939;
+                padding: 10px;
+                border-radius: 3px;
+                font-size: 16px;
+                font-weight: 400;
+                font-family: 'Raleway', sans-serif;
+                font-style: normal;
+                margin: 10px;
+            }
         </style>
     </head>
     <body>
 
             <ul id="nav" class="nav navbar-nav">
-            <span class="title">Cohort 7 - The Cohort for (Dog) Lovers</span>
+            <span class="title">COHORT 7 - The Cohort for (Dog) Lovers</span>
               {{ nav_link('home', 'Home') }}
               {{ nav_link('alex', 'Alex') }}
               {{ nav_link('anitha', 'Anitha') }}
@@ -60,7 +95,7 @@
               {{ nav_link('zach', 'Zach') }}
               {{ nav_link('theresa', 'Theresa - Program Manager') }}
               <br>
-              {{ nav_link('add_folder_get', 'Add-Folder') }}
+              {{ nav_link('add_assignment_get', 'Add Assignment') }}
             </ul>
 
         <div id="main">

@@ -4,6 +4,9 @@ app = Flask(__name__)
 my_list=["spaced-repetition-capstone", "algorithms interview practice", "GoalzApp"]
 pm_list = ["React Interview", "DSA Interview", "arm", "leg", "2/28 HW", "2/27 HW"]
 
+alex_list = ["hash maps", "hot or cold", "1 day react project", "Mocha/Chai", "blog app authentication" ]
+cohort_list = ["", "Alex", "Anitha", "John", "Roberto", "Spencer", "Zach"]
+
 @app.route("/")
 @app.route("/home")
 def home():
@@ -29,12 +32,13 @@ def delete_assignment_delete():
 
 @app.route("/add", methods=["GET"])
 def add_assignment_get():
-    return render_template("add_assignment.html")
+    return render_template("add_assignment.html", cohort_list=cohort_list)
     
 @app.route("/add", methods=["POST"])
 def add_assignment_post():
     assignmentEntry = request.form["title"]
     my_list.insert(0, assignmentEntry)
+    alex_list.insert(0, assignmentEntry)
     return redirect(url_for("home"))
 
 # @app.route("/<name>")
@@ -46,11 +50,10 @@ def add_assignment_post():
 @app.route("/alex")
 def alex():
     my_img = "https://avatars2.githubusercontent.com/u/22599303?v=3&s=400"
-    my_list = ["hash maps", "hot or cold", "1 day react project", "Mocha/Chai", "blog app authentication" ]
-    my_list_length = len(my_list)
+    my_list_length = len(alex_list)
     return render_template('child.html',
                             my_string="You and Alex have worked on %d assignments together:" % my_list_length,
-                            my_list=my_list,
+                            my_list=alex_list,
                             my_img=my_img)
                           
 @app.route("/anitha")
@@ -108,7 +111,7 @@ def theresa():
     my_img = "https://ca.slack-edge.com/T02D02A55-U2GJFK36Y-e4a4483c1f77-512"
     my_list_length = len(pm_list)
     return render_template('child.html',
-                           my_string="You have %d outstanding items for Theresa:" % my_list_length,
+                           my_string="You have %d outstanding assignments for Theresa:" % my_list_length,
                            my_list=pm_list,
                            my_img=my_img)
                            

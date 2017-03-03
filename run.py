@@ -4,7 +4,7 @@ app = Flask(__name__)
 my_list=["spaced-repetition-capstone", "algorithms interview practice", "GoalzApp"]
 pm_list = ["React Interview", "DSA Interview", "arm", "leg", "2/28 HW", "2/27 HW"]
 
-alex_list = ["hash maps", "hot or cold", "1 day react project", "Mocha/Chai", "blog app authentication" ]
+spencer_list = ["react-trello", "HackerNewsAPI", "Thinkful Tube"]
 cohort_list = ["", "Alex", "Anitha", "John", "Roberto", "Spencer", "Zach"]
 
 @app.route("/")
@@ -38,7 +38,7 @@ def add_assignment_get():
 def add_assignment_post():
     assignmentEntry = request.form["title"]
     my_list.insert(0, assignmentEntry)
-    alex_list.insert(0, assignmentEntry)
+    spencer_list.insert(0, assignmentEntry)
     return redirect(url_for("home"))
 
 # @app.route("/<name>")
@@ -50,10 +50,11 @@ def add_assignment_post():
 @app.route("/alex")
 def alex():
     my_img = "https://avatars2.githubusercontent.com/u/22599303?v=3&s=400"
-    my_list_length = len(alex_list)
+    my_list = ["hash maps", "hot or cold", "1 day react project", "Mocha/Chai", "blog app authentication" ]
+    my_list_length = len(my_list)
     return render_template('child.html',
                             my_string="You and Alex have worked on %d assignments together:" % my_list_length,
-                            my_list=alex_list,
+                            my_list=my_list,
                             my_img=my_img)
                           
 @app.route("/anitha")
@@ -89,11 +90,10 @@ def roberto():
 @app.route("/spencer")
 def spencer():
     my_img = "https://ca.slack-edge.com/T02D02A55-U2GKU5M0A-255c0ba93a2f-512"
-    my_list = ["algorithms interview practice", "react-trello", "HackerNewsAPI", "Thinkful Tube"]
-    my_list_length = len(my_list)
+    my_list_length = len(spencer_list)
     return render_template('child.html',
                            my_string="You and Spencer have worked on %d assignments together:" % my_list_length,
-                           my_list=my_list,
+                           my_list=spencer_list,
                            my_img=my_img)
 
 @app.route("/zach")

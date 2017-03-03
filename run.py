@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for
 app = Flask(__name__)
 
 my_list=["spaced-repetition-capstone", "algorithms interview practice", "GoalzApp"]
-
+pm_list = ["React Interview", "DSA Interview", "arm", "leg", "2/28 HW", "2/27 HW"]
 
 @app.route("/")
 @app.route("/home")
@@ -12,6 +12,20 @@ def home():
                            my_string="Your recent assignments:",
                            my_list=my_list,
                            my_img=my_img)
+
+@app.route("/delete", methods=["GET"])
+def delete_assignment_get():
+    return render_template("delete_assignment.html", pm_list=pm_list)
+    
+@app.route("/delete", methods=["POST"])
+def delete_assignment_delete():
+    # print(request)
+    
+    # assignmentDeletion = request.form["title"]
+
+    # pm_list.remove(assignmentDeletion)
+    return redirect(url_for("theresa"))
+
 
 @app.route("/add", methods=["GET"])
 def add_assignment_get():
@@ -92,11 +106,10 @@ def zach():
 @app.route("/theresa")
 def theresa():
     my_img = "https://ca.slack-edge.com/T02D02A55-U2GJFK36Y-e4a4483c1f77-512"
-    my_list = ["React Interview", "DSA Interview", "arm", "leg", "2/28 HW", "2/27 HW"]
-    my_list_length = len(my_list)
+    my_list_length = len(pm_list)
     return render_template('child.html',
                            my_string="You have %d outstanding items for Theresa:" % my_list_length,
-                           my_list=my_list,
+                           my_list=pm_list,
                            my_img=my_img)
                            
 

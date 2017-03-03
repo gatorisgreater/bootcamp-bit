@@ -16,7 +16,8 @@ Tech Stack:
     │ 
     ├── templates: HTML templates 
     │ └── add_assignment.html
-    │ └── child.html
+    │ └── child.html    
+    │ └── delete_assignment.html    
     │ └── macros.html
     │ └── parent.html
 
@@ -27,19 +28,18 @@ Tech Stack:
 Bootcamp Bit is designed with bootcamp students in mind.
 
 Abbreviated MVP Implementation:
+* Hardcoded user experience for Alex.
 
-API - GET endpoints that serve the assignments you've worked on with each cohort member. 
+* API - GET endpoints that serve the assignments you've worked on with each cohort member. 
 
-Front-End - Response presented within a dynamic HTML page customized for the cohort member you've queried.
+* Front-End - Response presented within a dynamic HTML page customized for the cohort member you've queried.
 
-Database - None. Data is stored within endpoints.
+* Database - None. Data is stored within endpoints.
 
 Future Improvements:
 
-Dashboard integration to advance "native" experience.
+* Dashboard integration to advance "native" experience. It would also serve as an administrative tool for PMs (finish up delete assignment endpoint).
 
-GitHub integration that automatically detects repos and collaborators.
+* GitHub integration that automatically detects repos and collaborators.
 
-Database Implementation.
-
-Streeeetch - build it to double as an administrative tool for PMs.
+* Database Implementation.

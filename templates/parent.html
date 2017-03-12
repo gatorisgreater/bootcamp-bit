@@ -28,15 +28,18 @@
             }
             
            ul#nav {
-                width: 20%;
+                width: 25%;
                 height: 100%;
+                padding-left: 1%;
                 position: fixed;
                 overflow: auto;
                 background-color: #6799FF;
                 color: white;
+                list-style: none;
              }
             
             .nav a, span {
+                text-decoration: none;
                 display: block;
                 padding: 8px 0px;
             }
@@ -46,7 +49,7 @@
                 background-color: #FCC939;
                 box-shadow: -5px 0 0 #FCC939, 5px 0 0 #FCC939;
                 border-radius: 3px;
-                width: 50%;
+                width: 95%;
             }
             
             a, a:visited, a:hover, a:active {
@@ -81,11 +84,28 @@
                 font-style: normal;
                 margin: 10px;
             }
+            
+            .nav li a {
+  		display: block;
+			border-bottom: 1px solid #ffffff;
+			padding: 1em;
+		}
+		
+		@media all and (min-width: 30em) {
+			.nav li {
+				display: inline-block;
+				margin: 0 0.5em;
+			}
+			.nav li a {
+				padding: 1em 0.5em;
+				border: 0;
+			}
+		}
         </style>
     </head>
     <body>
 
-            <ul id="nav" class="nav navbar-nav">
+            <ul id="nav" class="nav navbar-nav" role="navigation">
             <span class="title">COHORT 7 - The Cohort for (Dog) Lovers</span>
               {{ nav_link('home', 'Home') }}
               {{ nav_link('alex', 'Alex') }}
@@ -102,7 +122,7 @@
             </ul>
 
         <div id="main">
-            <h2>Bootcamp Bit </h2>
+            <h2>--bootcamp -bit </h2>
             <br>
             {% block content %}{% endblock %}
             <br>

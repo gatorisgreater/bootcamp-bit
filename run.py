@@ -53,7 +53,7 @@ def alex():
     my_list = ["hash maps", "hot or cold", "1 day react project", "Mocha/Chai", "blog app authentication" ]
     my_list_length = len(my_list)
     return render_template('child.html',
-                            my_string="You and Alex have worked on %d assignments together:" % my_list_length,
+                            my_string="You and Alex have worked on %d assignments:" % my_list_length,
                             my_list=my_list,
                             my_img=my_img)
                           
@@ -63,7 +63,7 @@ def anitha():
     my_list = ["spaced-repetition-capstone","MongoDB","shopping list app"]
     my_list_length = len(my_list)
     return render_template('child.html',
-                           my_string="You and Anitha have worked on %d assignments together:" % my_list_length,
+                           my_string="You and Anitha have worked on %d assignments:" % my_list_length,
                            my_list=my_list,
                            my_img=my_img)
 
@@ -73,7 +73,7 @@ def john():
     my_list = ["spaced-repetition-capstone","Recursion", "Knex/SQL", "DOM Traversal and Manipulation"]
     my_list_length = len(my_list)
     return render_template('child.html',
-                           my_string="You and John have worked on %d assignments together:" % my_list_length,
+                           my_string="You and John have worked on %d assignments:" % my_list_length,
                            my_list=my_list,
                            my_img=my_img)
 
@@ -83,7 +83,7 @@ def roberto():
     my_list = ["Search Algos", "Thinking in React", "Blog Authentication", "Blog-API", "In Your Own Words Challenge"]
     my_list_length = len(my_list)
     return render_template('child.html',
-                           my_string="You and Roberto have worked on %d assignments together:" % my_list_length,
+                           my_string="You and Roberto have worked on %d assignments:" % my_list_length,
                            my_list=my_list,
                            my_img=my_img)
 
@@ -92,7 +92,7 @@ def spencer():
     my_img = "https://ca.slack-edge.com/T02D02A55-U2GKU5M0A-255c0ba93a2f-512"
     my_list_length = len(spencer_list)
     return render_template('child.html',
-                           my_string="You and Spencer have worked on %d assignments together:" % my_list_length,
+                           my_string="You and Spencer have worked on %d assignments:" % my_list_length,
                            my_list=spencer_list,
                            my_img=my_img)
 
@@ -102,7 +102,7 @@ def zach():
     my_list = ["binary search trees", "React component testing", "mongoose inegration", "weather-challenge-app"]
     my_list_length = len(my_list)
     return render_template('child.html',
-                           my_string="You and Zach have worked on %d assignments together:" % my_list_length,
+                           my_string="You and Zach have worked on %d assignments:" % my_list_length,
                            my_list=my_list,
                            my_img=my_img)
 

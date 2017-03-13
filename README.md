@@ -7,7 +7,8 @@ Description:
 Everyday you pair program with a different cohort partner. By the time you graduate you'll pair multiples times with the same person and will have created more than 50 assignment folders. Keep track of your pairings, assignments, and what you owe your program manager with Bootcamp Bit.
 
 User Experience:
-Before kicking off your pair programming for the day query by cohort mate to see which assignments you've worked on together throughout your bootcamp experience. This could jog your memory about an open item or remind you of how far you've come.
+Before kicking off your pair programming for the day query by cohort mate to see which assignments you've worked on together throughout your bootcamp experience. This could jog your memory about an open item or remind you of how far you've come. You can also check to see which assignments you owe your PM. 
+
 
 Tech Stack:
 
